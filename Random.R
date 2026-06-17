@@ -27,11 +27,12 @@ list <- list()
 
 
 # Loop script till figure 4 and save results in "list"
-for (a in 1:2) {
+for (a in 1:10000) {
 
 # Load the dataset (txt file)
 xdata <- read.delim("xdata.txt", header=TRUE, stringsAsFactors = TRUE)
 
+# Optional
 IDs <- xdata$Combination
 tab <- table(IDs)
 weights <- 1 / (length(tab) * tab[IDs])
@@ -48,7 +49,7 @@ for (i in 8:343) {
 
 xdata <- xdata[,-c(1)] # For clearer results, we remove the recording names from the analysis
 
-res.mca<-MCA(xdata,quanti.sup=c(5,6), quali.sup=c(1:4), row.w=weights) # Run the MCA
+res.mca<-MCA(xdata,quanti.sup=c(5,6), quali.sup=c(1:4)) # row.w=weights) # Run the MCA
 
 #################################################### Extract distances between utterances ####################################################
 
