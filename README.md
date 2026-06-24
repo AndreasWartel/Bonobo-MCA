@@ -1,5 +1,5 @@
 # Supplementary-material
-Supplementary R-code to "Structure without semantics? A reanalysis of Berthet et al. (2025)":
+Supplementary R-code to "Structure without semantics: No evidence for bonobo compositionality in Berthet et al. (2025)":
 1. R-code for the full permutation test of the MCA appearing in Berthet et al. (2025) (Full MCA permutation.R)
 2. the manipulated R-code of Berthet et al. (2015) feeding it with random data. (Random.R)
 3. the manipulated R-code of Berthet et al. (2015) feeding it with random data with retained NA:s. (Random with NAs retained.R)
