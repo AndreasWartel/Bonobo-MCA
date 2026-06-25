@@ -1,10 +1,10 @@
 # Supplementary-material
 Supplementary R-code to "Structure without semantics: No evidence for bonobo compositionality in Berthet et al. (2025)": 
-1. the manipulated R-code of Berthet et al. (2015) feeding it with random data. (Random.R)
-2. the manipulated R-code of Berthet et al. (2015) feeding it with random data with retained NA:s. (Random with NAs retained.R)
-3. R-code for the full permutation test of the MCA appearing in Berthet et al. (2025) (Full MCA permutation.R)
+1. 01_berthet_pipeline_randomized_data
+2. 02_berthet_pipeline_randomized_data_NAs_retained
+3. 03_weighted_mca_permutation_test
 
-Random-data validation
+Random-data validation (1, 2)
 
 This script tests the inferential procedure of Berthet et al. (2025) using simulated data containing no association between call types and contextual features. For each iteration, a random binary feature matrix is generated and passed through the same MCA → barycenter distance → linear model → emmeans workflow used in the original study.
 
@@ -12,7 +12,7 @@ Because the data contain no true signal, any significant result is by definition
 
 An additional option preserves the original NA structure while randomizing all observed values, allowing assessment of how patterns of missingness influence the resulting MCA geometry.
 
-Full MCA permutation test
+Full MCA permutation test (3)
 
 This script performs a permutation test of call-type structure in the MCA space. The observed ratio of between-call-type inertia to total inertia is first calculated from a weighted MCA. Call-type labels are then randomly permuted across observations, a new MCA is recomputed for each permutation, and the inertia ratio is recalculated.
 
